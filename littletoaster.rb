@@ -1,6 +1,6 @@
 require 'rrobots'
 
-class LittleToaster
+class Littletoaster
   include Robot
 
   def tick events
