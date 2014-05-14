@@ -43,7 +43,7 @@ class Panzer2
     turn_radar 60
     unless events['robot_scanned'].empty?
      turn_gun radar_heading - gun_heading - 45#- @turn
-     fire 3
+     fire 1
      #puts radar_heading - gun_heading - @turn - 45
     end
   end
