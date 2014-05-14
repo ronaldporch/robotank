@@ -4,22 +4,21 @@ class Duck
   include Robot
 
   def tick events
+    size = 1 if time == 0
     move_random
     aimbot
   end
 
   def move_random
     accelerate -1 + rand(2)
-    turn -10 + rand(20)
+    turn -5 + rand(10)
   end
 
   def aimbot
     turn_radar 60
     unless events['robot_scanned'].empty?
-     puts radar_heading
      turn_gun radar_heading - gun_heading
-     #puts radar_heading - gun_heading
-     fire 3
+     fire 2
     end
   end
 end
